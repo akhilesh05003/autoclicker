@@ -1,0 +1,63 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.autoclicker.app-debug-4:/values_values.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "3,2",
+                        "startColumns": "4,4",
+                        "startOffsets": "113,55",
+                        "endColumns": "148,57",
+                        "endOffsets": "257,108"
+                    },
+                    "to": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,204",
+                        "endColumns": "148,57",
+                        "endOffsets": "199,257"
+                    }
+                },
+                {
+                    "source": "/Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/res/values/styles.xml",
+                    "from": {
+                        "startLines": "-1",
+                        "startColumns": "-1",
+                        "startOffsets": "-1"
+                    },
+                    "to": {
+                        "startLines": "4",
+                        "startColumns": "4",
+                        "startOffsets": "262",
+                        "endColumns": "338",
+                        "endOffsets": "596"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/akhilesh.kumar/.gradle/daemon/9.6.0/com.example.autoclicker.app-debug-4:/values_values.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/res/values/styles.xml",
+                    "from": {
+                        "startLines": "0",
+                        "startColumns": "11",
+                        "startOffsets": "11",
+                        "endColumns": "345",
+                        "endOffsets": "345"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "338",
+                        "endOffsets": "389"
+                    }
+                }
+            ]
+        }
+    ]
+}

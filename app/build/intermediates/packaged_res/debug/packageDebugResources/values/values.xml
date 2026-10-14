@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="accessibility_service_description">Allows Selorria AutoClicker to perform repeated taps at your selected screen position.</string>
+    <string name="app_name">Selorria AutoClicker</string>
+    <style name="AppTheme" parent="android:style/Theme.Material.Light.NoActionBar"><item name="android:fontFamily">sans</item><item name="android:colorAccent">#2A694C</item><item name="android:windowLightStatusBar">true</item><item name="android:statusBarColor">#FAFBF9</item><item name="android:navigationBarColor">#FAFBF9</item></style>
+</resources>

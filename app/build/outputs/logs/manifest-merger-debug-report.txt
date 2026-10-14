@@ -1,0 +1,81 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/AndroidManifest.xml:1:1-13:12
+INJECTED from /Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/AndroidManifest.xml:1:1-13:12
+INJECTED from /Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/AndroidManifest.xml:1:1-13:12
+INJECTED from /Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/AndroidManifest.xml:1:1-13:12
+	package
+		INJECTED from /Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/AndroidManifest.xml:1:11-69
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from /Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/AndroidManifest.xml:2:5-78
+	android:name
+		ADDED from /Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/AndroidManifest.xml:2:22-75
+application
+ADDED from /Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/AndroidManifest.xml:3:5-12:19
+INJECTED from /Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/AndroidManifest.xml:3:5-12:19
+	android:extractNativeLibs
+		INJECTED from /Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/AndroidManifest.xml
+	android:label
+		ADDED from /Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/AndroidManifest.xml:3:50-86
+	android:allowBackup
+		ADDED from /Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/AndroidManifest.xml:3:87-114
+	android:theme
+		ADDED from /Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/AndroidManifest.xml:3:18-49
+activity#com.example.autoclicker.MainActivity
+ADDED from /Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/AndroidManifest.xml:4:9-6:20
+	android:exported
+		ADDED from /Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/AndroidManifest.xml:4:48-71
+	android:name
+		ADDED from /Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/AndroidManifest.xml:4:19-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/AndroidManifest.xml:5:13-154
+action#android.intent.action.MAIN
+ADDED from /Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/AndroidManifest.xml:5:28-79
+	android:name
+		ADDED from /Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/AndroidManifest.xml:5:36-77
+category#android.intent.category.LAUNCHER
+ADDED from /Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/AndroidManifest.xml:5:79-138
+	android:name
+		ADDED from /Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/AndroidManifest.xml:5:89-136
+service#com.example.autoclicker.GestureAccessibilityService
+ADDED from /Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/AndroidManifest.xml:7:9-10:19
+	android:label
+		ADDED from /Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/AndroidManifest.xml:7:153-189
+	android:exported
+		ADDED from /Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/AndroidManifest.xml:7:129-152
+	android:permission
+		ADDED from /Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/AndroidManifest.xml:7:62-128
+	android:name
+		ADDED from /Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/AndroidManifest.xml:7:18-61
+intent-filter#action:name:android.accessibilityservice.AccessibilityService
+ADDED from /Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/AndroidManifest.xml:8:13-118
+action#android.accessibilityservice.AccessibilityService
+ADDED from /Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/AndroidManifest.xml:8:28-102
+	android:name
+		ADDED from /Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/AndroidManifest.xml:8:36-100
+meta-data#android.accessibilityservice
+ADDED from /Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/AndroidManifest.xml:9:13-122
+	android:resource
+		ADDED from /Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/AndroidManifest.xml:9:68-120
+	android:name
+		ADDED from /Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/AndroidManifest.xml:9:24-67
+service#com.example.autoclicker.FloatingPanelService
+ADDED from /Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/AndroidManifest.xml:11:9-82
+	android:exported
+		ADDED from /Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/AndroidManifest.xml:11:55-79
+	android:name
+		ADDED from /Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/AndroidManifest.xml:11:18-54
+uses-sdk
+INJECTED from /Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/AndroidManifest.xml
+INJECTED from /Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/akhilesh.kumar/Downloads/autoclicker/app/src/main/AndroidManifest.xml

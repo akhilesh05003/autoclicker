@@ -1,0 +1,4 @@
+com.example.autoclicker:xml/accessibility_service_config = 0x7f030000
+com.example.autoclicker:style/AppTheme = 0x7f020000
+com.example.autoclicker:string/app_name = 0x7f010001
+com.example.autoclicker:string/accessibility_service_description = 0x7f010000
