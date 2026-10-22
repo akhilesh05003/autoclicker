@@ -18,9 +18,9 @@ import android.widget.Toast;
 public class MainActivity extends Activity {
     private EditText intervalInput, repeatInput;
     private TextView targetLabel;
-    private int ink = Color.rgb(28, 45, 37);
-    private int green = Color.rgb(42, 105, 76);
-    private int pale = Color.rgb(232, 243, 236);
+    private int ink = Color.rgb(25, 39, 32);
+    private int green = Color.rgb(37, 91, 64);
+    private int pale = Color.rgb(235, 241, 232);
 
     @Override public void onCreate(Bundle state) {
         super.onCreate(state);
@@ -29,16 +29,16 @@ public class MainActivity extends Activity {
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         LinearLayout root = new LinearLayout(this);
         root.setOrientation(LinearLayout.VERTICAL);
-        root.setPadding(dp(24), dp(26), dp(24), dp(24));
-        root.setBackgroundColor(Color.rgb(250, 251, 249));
+        root.setPadding(dp(22), dp(24), dp(22), dp(28));
+        root.setBackgroundColor(Color.rgb(247, 247, 241));
 
-        TextView brand = new TextView(this); brand.setText("✦ SELORRIA"); brand.setTextColor(green); brand.setTextSize(13); brand.setLetterSpacing(.12f); root.addView(brand);
-        TextView title = new TextView(this); title.setText("AutoClicker"); title.setTextColor(ink); title.setTextSize(30); title.setTypeface(null, 1); title.setPadding(0, dp(8), 0, 0); root.addView(title);
-        TextView tagline = new TextView(this); tagline.setText("Click less. Get more done."); tagline.setTextColor(green); tagline.setTextSize(17); tagline.setPadding(0, dp(3), 0, dp(8)); root.addView(tagline);
-        TextView intro = new TextView(this); intro.setText("Simple repeated tapping, right where you need it. Choose a target, set your interval, then start or stop from the floating controls."); intro.setTextColor(Color.rgb(90, 101, 94)); intro.setTextSize(15); intro.setPadding(0, 0, 0, dp(22)); root.addView(intro);
+        TextView brand = new TextView(this); brand.setText("✦  SELORRIA  /  DIGITAL PRODUCTS"); brand.setTextColor(green); brand.setTextSize(11); brand.setLetterSpacing(.10f); brand.setTypeface(null, 1); root.addView(brand);
+        TextView title = new TextView(this); title.setText("Selorria AutoClicker"); title.setTextColor(ink); title.setTextSize(28); title.setTypeface(null, 1); title.setPadding(0, dp(8), 0, 0); root.addView(title);
+        TextView tagline = new TextView(this); tagline.setText("Your Wish. Our Command."); tagline.setTextColor(green); tagline.setTextSize(16); tagline.setPadding(0, dp(3), 0, dp(8)); root.addView(tagline);
+        TextView intro = new TextView(this); intro.setText("Click less. Get more done.\n\nA lightweight tool for simple repeated tapping. Choose your target, set an interval, and stay in control."); intro.setTextColor(Color.rgb(90, 101, 94)); intro.setTextSize(15); intro.setLineSpacing(dp(3), 1f); intro.setPadding(0, 0, 0, dp(22)); root.addView(intro);
 
         TextView targetHeading = heading("TARGET POSITION"); root.addView(targetHeading);
-        targetLabel = new TextView(this); targetLabel.setTextColor(ink); targetLabel.setTextSize(15); targetLabel.setPadding(dp(14), dp(14), dp(14), dp(14)); targetLabel.setBackgroundColor(pale); root.addView(targetLabel, fullWidth()); refreshTarget();
+        targetLabel = new TextView(this); targetLabel.setTextColor(ink); targetLabel.setTextSize(15); targetLabel.setPadding(dp(14), dp(14), dp(14), dp(14)); targetLabel.setBackground(round(pale, 16)); targetLabel.setElevation(dp(1)); root.addView(targetLabel, fullWidth()); refreshTarget();
         Button overlay = button("Allow floating controls"); root.addView(overlay, spaced()); overlay.setOnClickListener(v -> { if (!Settings.canDrawOverlays(this)) startActivity(new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION, Uri.parse("package:" + getPackageName()))); else toast("Floating controls are already allowed."); });
         Button accessibility = button("Enable accessibility service"); root.addView(accessibility, spaced()); accessibility.setOnClickListener(v -> startActivity(new Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS)));
 
@@ -47,8 +47,8 @@ public class MainActivity extends Activity {
         TextView repeatHeading = heading("REPEAT COUNT"); repeatHeading.setPadding(0, dp(18), 0, dp(8)); root.addView(repeatHeading);
         repeatInput = new EditText(this); repeatInput.setSingleLine(true); repeatInput.setInputType(2); repeatInput.setText(String.valueOf(getSharedPreferences("selorria", MODE_PRIVATE).getInt("repeat", 0))); repeatInput.setHint("0 = continuous"); root.addView(repeatInput, fullWidth());
         TextView hint = new TextView(this); hint.setText("Enter 0 for continuous tapping, or a positive number for a fixed number of taps. Minimum interval: 50 ms."); hint.setTextColor(Color.rgb(100, 110, 103)); hint.setTextSize(13); hint.setPadding(0, dp(8), 0, dp(8)); root.addView(hint);
-        Button launch = button("Launch floating controls"); launch.setTextColor(Color.WHITE); launch.setBackgroundTintList(android.content.res.ColorStateList.valueOf(green)); LinearLayout.LayoutParams lp = spaced(); lp.topMargin = dp(20); root.addView(launch, lp); launch.setOnClickListener(v -> launchPanel());
-        TextView footer = new TextView(this); footer.setText("No root required · Android 7.0+"); footer.setGravity(Gravity.CENTER); footer.setTextColor(Color.GRAY); footer.setTextSize(12); footer.setPadding(0, dp(20), 0, 0); root.addView(footer);
+        Button launch = button("Launch floating controls"); launch.setTextColor(Color.WHITE); launch.setBackground(round(green, 16)); LinearLayout.LayoutParams lp = spaced(); lp.topMargin = dp(20); root.addView(launch, lp); launch.setOnClickListener(v -> launchPanel());
+        TextView footer = new TextView(this); footer.setText("✦  DIGITAL-FIRST  ·  NO ROOT REQUIRED  ·  ANDROID 7.0+"); footer.setGravity(Gravity.CENTER); footer.setTextColor(Color.GRAY); footer.setTextSize(12); footer.setPadding(0, dp(20), 0, 0); root.addView(footer);
         ScrollView scroll = new ScrollView(this); scroll.setFillViewport(true); scroll.addView(root); setContentView(scroll);
     }
 
@@ -66,7 +66,8 @@ public class MainActivity extends Activity {
     @Override protected void onResume() { super.onResume(); if (targetLabel != null) refreshTarget(); }
     private void refreshTarget() { int x = getSharedPreferences("selorria", MODE_PRIVATE).getInt("targetX", -1), y = getSharedPreferences("selorria", MODE_PRIVATE).getInt("targetY", -1); targetLabel.setText(x < 0 ? "No target selected yet" : "Selected target  ·  X " + x + "  /  Y " + y); }
     private TextView heading(String s) { TextView t = new TextView(this); t.setText(s); t.setTextColor(ink); t.setTextSize(12); t.setTypeface(null, 1); t.setPadding(0, 0, 0, dp(8)); return t; }
-    private Button button(String s) { Button b = new Button(this); b.setText(s); b.setAllCaps(false); b.setTextColor(green); return b; }
+    private Button button(String s) { Button b = new Button(this); b.setText(s); b.setAllCaps(false); b.setTextColor(green); b.setBackground(round(pale, 14)); b.setPadding(dp(12), dp(8), dp(12), dp(8)); return b; }
+    private android.graphics.drawable.GradientDrawable round(int color, int radius) { android.graphics.drawable.GradientDrawable d = new android.graphics.drawable.GradientDrawable(); d.setColor(color); d.setCornerRadius(dp(radius)); d.setStroke(dp(1), Color.rgb(221, 229, 217)); return d; }
     private LinearLayout.LayoutParams fullWidth() { return new LinearLayout.LayoutParams(-1, -2); }
     private LinearLayout.LayoutParams spaced() { LinearLayout.LayoutParams p = fullWidth(); p.topMargin = dp(8); return p; }
     private int dp(int v) { return (int)(v * getResources().getDisplayMetrics().density + .5f); }
